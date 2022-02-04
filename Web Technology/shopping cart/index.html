@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+			button{
+				cursor: pointer;
+			}
+        </style>
+    <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+    <body style="background-color:powderblue;">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+              <img src="/img/1.png" width="30" height="30" class="d-inline-block align-top" alt="">
+              Dmarket
+            </a>
+          </nav>
+        <h1> <center>Shopping Cart</center></h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-outline-secondary">
+                        <div class="card-header">
+                            <h3 class="mb-0">Create Product</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="CreateProductForm">
+                              <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label" for="pimage">Product Image</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" type="file" id="pimage">
+                                </div>
+                            </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label" for="pname">Product Name</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" id="pname" placeholder="Enter Product Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label" for="pname">Product Price</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" id="txtPrice" placeholder="Enter Price" >
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label" for="pname">Product Quantity</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="number" id="txtQty" placeholder="Enter Quantity">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label"></label>
+                                    <div class="col-lg-9">
+                                        <input class="btn btn-secondary btnCancel" type="reset" value="Clear">
+                                        <input class="btn btn-primary btnSave" type="button" value="Save Changes" onclick="SaveProduct(this);">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-outline-secondary">
+                        <div class="card-header">
+                            <h3 class="mb-0"><center>Products List</center></h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered table-sm" id="dtTable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Product Name</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col">ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-lg-12">
+              <div class="card card-outline-secondary">
+                <div class="card-header">
+                    <h3 class="mb-0"><center>Cart</center></h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-sm" id="cartTable">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 110px;">Image</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ordertotal">
+                  <div id="t" class="odertotal_content text-md-right mr-3">
+                    <div class="font-weight-bold">Order total:</div>
+                    <div id="total"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+    <script src="index.js"></script>
+</html>
