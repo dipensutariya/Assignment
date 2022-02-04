@@ -1,0 +1,42 @@
+use training
+db.createCollection('student')
+db.student.insertMany([
+	{
+	name:"Dipen",
+	city:"Gandhinagar",
+	age:23
+	},
+	{
+	name:"Henil",
+	city:"Gandhinagar",
+	age:22
+	},
+	{
+	name:"Hrutvik",
+	city:"Ahmedabad",
+	age:22
+	},
+	{
+	name:"Darpal",
+	city:"Gandhinagar",
+	age:22
+	},
+	])
+	
+db.student.insert(
+	{
+	name:"Utsav",
+	city:"Gandhinagar",
+	age:23
+	}
+	)
+
+db.student.find()
+db.student.find().pretty
+
+db.student.updateOne({name:"Dipen"},{$set:{age:22}})
+db.student.deleteOne({name:"Utsav"})
+-----------------------------------------------------------------------------------------------------------------------
+db.student.find({city:'Gandhinagar'})
+db.student.find({city:'Gandhinagar'}).count()
+db.student.createIndex({studentID:1})
