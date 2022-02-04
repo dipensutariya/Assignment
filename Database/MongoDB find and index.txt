@@ -1,0 +1,3 @@
+db.student.find({city:'Gandhinagar'})
+db.student.find({city:'Gandhinagar'}).count()
+db.student.createIndex({studentID:1})
