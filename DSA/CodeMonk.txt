@@ -1,0 +1,14 @@
+Monk and rotation
+
+test_Case = int(raw_input())
+while test_Case!=0:
+    n,k = map(int,raw_input().split())
+    arr = map(int,raw_input().split())
+    index = n - (k%n)
+    for i in range(index, n):
+        print arr[i],
+    for i in range(index):
+        print arr[i],
+    print ""
+    test_Case-=1
+-------------------------------------------
