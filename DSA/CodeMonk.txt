@@ -53,3 +53,19 @@ while test_Case!=0:
     print ""
     test_Case -= 1
 -----------------------------------------------------------------------------
+Minimun And xor or
+
+test_Case = int(raw_input())
+while test_Case!=0:
+    n = int(raw_input())
+    array = map(int, raw_input().split(' '))
+    array.sort()
+    min = array[0] ^ array[1]
+    for i in range(1,n-1):
+        temp = array[i] ^ array[i+1]
+        if temp < min:
+            min = temp
+    print min
+    print ""
+    test_Case -=1
+-----------------------------------------------------------------------------
