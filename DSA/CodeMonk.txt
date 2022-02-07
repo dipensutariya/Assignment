@@ -30,3 +30,26 @@ while test_Case!=0:
     print count
     test_Case -=1
 -----------------------------------------------------------------------------
+Cyclic Shift
+
+test_Case = int(raw_input())
+while test_Case!=0:
+    n,k = map(int,raw_input().split())
+    s = raw_input()
+    max = ""
+    p = -1
+    for i in range(n):
+        if max < s:
+            max = s
+            d = i
+        elif max == s:
+            p = i - d
+            break
+        s = s[1:] + s[:1]
+    if p == -1:
+        print (d + (k-1)*n)
+    else:
+        print (d + (k-1)*p)
+    print ""
+    test_Case -= 1
+-----------------------------------------------------------------------------
