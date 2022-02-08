@@ -82,3 +82,15 @@ for i in range(n):
     print (count)
 
 -----------------------------------------------------------------------------
+Monk and Suffix Sort
+
+s,n = map(str, raw_input().split())
+n=int(n)
+for i in range(len(s)):
+    arr.append(s)
+    s = s[1:]
+arr.sort()
+print arr[n-1]
+
+-----------------------------------------------------------------------------
+
