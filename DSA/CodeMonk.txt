@@ -69,3 +69,16 @@ while test_Case!=0:
     print ""
     test_Case -=1
 -----------------------------------------------------------------------------
+Monk and Nice string
+
+n = input()
+s =[]
+for i in range(n):
+    s.append(raw_input())
+    count = 0
+    for j in range(i):
+        if s[j] < s[i]:
+            count +=1
+    print (count)
+
+-----------------------------------------------------------------------------
